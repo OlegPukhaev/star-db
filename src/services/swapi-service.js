@@ -32,17 +32,4 @@ export default class SwapiService {
   getPlanet(id) {
     return this.getResourse(`/planets/${id}`);
   }
-
 }
-
-const swapi = new SwapiService();
-
-swapi.getAllPeople().then( people => {
-  people.forEach(element => {
-    console.log(element.name);
-  });
-});
-
-swapi.getPerson(3).then( person => {
-  console.log("Person Name: ", person.name);
-});
